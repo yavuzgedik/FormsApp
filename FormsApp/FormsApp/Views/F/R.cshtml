@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+    var message = TempData["AlertMessage"] ?? string.Empty;
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="~/Content/Css/form.css" rel="stylesheet" />
+
+
+<div class="container">
+    <form id="contact" action="" method="post">
+        @using (Html.BeginForm("R", "F"))
+        {
+            <center>
+                <h3>Bilgisayar Bilimleri Kahvaltı Etkinliği</h3>
+
+                <p><b>Bilgisayar Bilimleri Tanışma Kahvaltısı - 22 Ekim 2016 Cumartesi Günü - Alsancak / Kordon - Mekan henüz belli değil önerilerinizi iletebilirsiniz.</b></p>
+
+                <a style="font-size: 15px;" href="http://kodfest.com/" target="_blank"><p>kodfest.com</p></a>
+                <a style="font-size: 15px;" href="https://twitter.com/kodfest" target="_blank"><p>twitter.com/kodfest</p></a>
+            </center>
+            <fieldset>
+                <input placeholder="İsim Soyisim" type="text" tabindex="1" required autofocus name="Name">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Telefon Numaranız" type="tel" tabindex="3" required name="Phone">
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Öneriler..." tabindex="5" required name="Tender"></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Kayıt Ol</button>
+            </fieldset>
+        }
+    </form>
+</div>
+
+<script type="text/javascript">
+    var message = '@message';
+    if(message)
+        alert(message);
+</script>

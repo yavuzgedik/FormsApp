@@ -1,0 +1,31 @@
+﻿@model List<FormsApp.Models.FormItem>
+@{
+    Layout = null;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="~/Content/Css/table.css" rel="stylesheet" />
+
+<!-- TABLE -->
+<table class="table table-action">
+    <thead>
+        <tr>
+            <th><b>İsim - Soy İsim</b></th>
+            <th><b>Öneri</b></th>
+            <th><b>Tarih</b></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Tender</td>
+                    <td>@item.RegisterDate.ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<!-- END TABLE -->
