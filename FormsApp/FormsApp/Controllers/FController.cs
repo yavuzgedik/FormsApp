@@ -26,7 +26,8 @@ namespace FormsApp.Controllers
                 con.SaveChanges();
             }
 
-            TempData["AlertMessage"] = "Kaydınız Alınmıştır!";
+            TempData["AlertMessage"] = "Kayıt Alındı!";
+
             return View();
         }
 

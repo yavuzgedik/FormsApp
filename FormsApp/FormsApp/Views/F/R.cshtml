@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
     var message = TempData["AlertMessage"] ?? string.Empty;
 }
@@ -27,10 +26,10 @@
                 <input placeholder="Telefon Numaranız" type="tel" tabindex="3" required name="Phone">
             </fieldset>
             <fieldset>
-                <textarea placeholder="Öneriler..." tabindex="5" required name="Tender"></textarea>
+                <textarea placeholder="Öneriler..." tabindex="5" name="Tender"></textarea>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Kayıt Ol</button>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Gönderiliyor">Kayıt Ol</button>
             </fieldset>
         }
     </form>
