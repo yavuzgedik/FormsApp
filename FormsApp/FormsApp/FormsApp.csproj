@@ -112,6 +112,7 @@
     </Compile>
     <Compile Include="Models\FormCon.cs" />
     <Compile Include="Models\FormItem.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +120,8 @@
     <Content Include="packages.config" />
     <Content Include="Views\F\R.cshtml" />
     <Content Include="Views\F\L.cshtml" />
+    <None Include="Properties\PublishProfiles\fapps - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\fapps - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

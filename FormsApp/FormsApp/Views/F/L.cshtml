@@ -20,7 +20,7 @@
             foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Name</td>
+                    <td>@item.Name.ToUpper()</td>
                     <td>@item.Tender</td>
                     <td>@item.RegisterDate.ToString("dd/MM/yyyy")</td>
                 </tr>

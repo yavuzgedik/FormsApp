@@ -16,18 +16,28 @@ namespace FormsApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult R(FormItem model)
+        public ActionResult R(ViewModel model)
         {
-            model.RegisterDate = DateTime.Now;
-
-            using (FormCon con = new FormCon())
+            if(model.first + model.second == model.top)
             {
-                con.FormItem.Add(model);
-                con.SaveChanges();
+                using (FormCon con = new FormCon())
+                {
+                    FormItem item = new FormItem();
+                    item.Name = model.Name;
+                    item.Phone = model.Phone;
+                    item.RegisterDate = DateTime.Now;
+                    item.Tender = model.Tender;
+                    con.FormItem.Add(item);
+                    con.SaveChanges();
+                }
+
+                TempData["AlertMessage"] = "Kayıt Alındı!";
             }
+            else
+            {
+                TempData["AlertMessage"] = "Toplama Yanlış!";
 
-            TempData["AlertMessage"] = "Kayıt Alındı!";
-
+            }
             return View();
         }
 

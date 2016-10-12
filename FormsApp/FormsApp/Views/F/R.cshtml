@@ -28,9 +28,22 @@
             <fieldset>
                 <textarea placeholder="Öneriler..." tabindex="5" name="Tender"></textarea>
             </fieldset>
+
+                Random r = new Random();
+                int first = r.Next(1, 9);
+                int second = r.Next(1, 9);
+            
+            <input type="hidden" value="@first" name="first"/>
+            <input type="hidden" value="@second" name="second" />
+
+                <fieldset>
+                    <input placeholder="@first + @second = ?" type="text" tabindex="7" required name="top">
+                </fieldset>
+
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Gönderiliyor">Kayıt Ol</button>
             </fieldset>
+            
         }
     </form>
 </div>
