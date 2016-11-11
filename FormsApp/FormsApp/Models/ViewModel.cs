@@ -10,6 +10,7 @@ namespace FormsApp.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Tender { get; set; }
+        public string Email { get; set; }
         public DateTime RegisterDate { get; set; }
         public virtual int first { get; set; }
         public virtual int second { get; set; }

@@ -26,12 +26,13 @@ namespace FormsApp.Controllers
                     item.Name = model.Name;
                     item.Phone = model.Phone;
                     item.RegisterDate = DateTime.Now;
-                    item.Tender = model.Tender;
+                    //item.Tender = model.Tender;
+                    item.Email = model.Email;
                     con.FormItem.Add(item);
                     con.SaveChanges();
                 }
 
-                TempData["AlertMessage"] = "Kayıt Alındı!";
+                TempData["AlertMessage"] = "Teşekkür Ederiz, Etkinliklerde Görüşmek üzere :)";
             }
             else
             {
